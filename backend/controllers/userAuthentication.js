@@ -8,7 +8,7 @@ const userModel = require('../models/userModel')
 require("dotenv").config();
 const secret = process.env.JWT_SECRET;
 const mail=process.env.AUTH_MAIL
-const mailpass=process.env.AUTH_MAIL
+const mailpass=process.env.AUTH_PASS
 
 let transporter=nodemailer.createTransport({
   service: "gmail",
