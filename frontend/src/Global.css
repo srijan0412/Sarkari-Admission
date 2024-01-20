@@ -1,0 +1,10 @@
+/* Global CSS */
+/* Styles here will be applied to the whole Project */
+/* Template Styles & Utility Classes are kept here! */
+
+/* Resetting Global CSS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
