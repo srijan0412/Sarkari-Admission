@@ -11,7 +11,7 @@ const OTPVerification = () => {
 
   const handleVerification = async () => {
     try {
-      const response = await axios.post('https://localhost:4000/verify-otp', { userID: 'userId', otp });
+      const response = await axios.post('localhost:4000/verify-otp', { userID: 'userId', otp });
       console.log(response.data);
     } catch (error) {
       console.error(error.response.data);

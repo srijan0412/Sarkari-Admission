@@ -15,7 +15,7 @@ const UserRegistration = () => {
 
   const handleRegistration = async () => {
     try {
-      const response = await axios.post('https://localhost:4000/register', formData);
+      const response = await axios.post('localhost:4000/register', formData);
       console.log(response.data);
     } catch (error) {
       console.error(error.response.data);
