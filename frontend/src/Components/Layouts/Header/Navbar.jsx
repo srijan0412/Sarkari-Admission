@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { SarkariAdmissionLogo } from "../../Assets";
+import { SarkariAdmissionLogo } from "../../../Assets";
 import "./Navbar.css";
 
 const data = [
