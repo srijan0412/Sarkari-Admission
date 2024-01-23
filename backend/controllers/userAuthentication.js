@@ -94,3 +94,43 @@ exports.VerifyOTP = async(req,res)=>{
     res.status(500).json({error})
   }
 }
+
+exports.UserLogin=async (req,res)=>{
+    try{
+      let {userEmail,password}=req.body;
+      const user=await User.findOne({userEmail});
+      if(!user){
+        throw new Error({ UserExists: false, passCheck: false })
+      }
+      const passCheck = bcrypt.compareSync(password, user.password,{ expiresIn: '1h' })
+      if(passCheck){
+        const token = jwt.sign({ userId: user._id }, secret)
+        await User.findOneAndUpdate({ email: user.email }, { token })
+        res.status(200).json({ UserExists: true, passCheck: true,  user })
+
+      }
+      else{
+        throw new Error({UserExists:true,passCheck:false})
+      }
+    }catch(err){
+      res.status(500).json({message:err})
+    }
+}
+exports.UserLogout = async (req,res)=>{
+  try{
+    res
+    .status(200)
+    .cookie("token", null, {
+      expires: new Date(Date.now()),
+      httpOnly: true,
+      secure: true,
+      sameSite: "none",
+    })
+    .json({
+      success: true,
+      message: "Logged Out Successfully",
+    });
+  }catch(err){
+    res.status(500).json({success: true,message: "Logged Out Successfully",})
+  }
+}
