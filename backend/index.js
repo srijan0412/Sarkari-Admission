@@ -15,6 +15,6 @@ app.use("/user", require("./routes/userRoutes.js"));
 
 
 app.listen(
-    3000,
-    console.log('Server is running on 3000')
+    4000,
+    console.log('Server is running on 4000')
 )

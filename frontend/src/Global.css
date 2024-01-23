@@ -2,9 +2,35 @@
 /* Styles here will be applied to the whole Project */
 /* Template Styles & Utility Classes are kept here! */
 
+/* Imports */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 /* Resetting Global CSS */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+  --color1: #fbfbfc;
+  --color2: #050038;
+  --color3: #f5a041;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--color2);
+}
+
+/* Utility Classes */
+.invisible {
+  display: none;
+}
+
+.visible {
+  display: block;
 }

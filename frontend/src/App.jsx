@@ -1,11 +1,22 @@
 import React from "react";
-import "./Global.css"
+import "./Global.css";
+import {Footer, Navbar,Home} from "./Components/export";
+
+
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 
 const App = () => {
   return (
-    <div>
-      App
-    </div>
+    <Router>
+      <>
+       <Navbar/>
+               <Routes>
+                   <Route path="/" element={<Home />} />
+               </Routes>
+       <Footer/>       
+      </>
+    </Router>
   );
 };
 

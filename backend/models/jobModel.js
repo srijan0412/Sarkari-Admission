@@ -19,6 +19,5 @@ const Job = new mongoose.Schema({
     companyLogo:{
         type:String
     }
-    
 })
 module.exports = mongoose.model('JobData', Job);
