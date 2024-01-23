@@ -4,7 +4,7 @@ const College = new mongoose.Schema({
     collegeName:{
         type:String
     },
-    university:{
+    affiliatedUniversity:{
         type:String
     },
     course:[{
@@ -13,9 +13,6 @@ const College = new mongoose.Schema({
     location:{
         type:String
     },
-    feesRange:{
-        type:mongoose.Schema.Types.Mixed
-    },
     ranking:{
         type:String
     },
@@ -23,8 +20,6 @@ const College = new mongoose.Schema({
         type:String,
         enum:['Private','Goverment']
     },
-    Syllabus:{
-        type:String
-    }
+    
 })
 module.exports = mongoose.model('CollegeData', College);
