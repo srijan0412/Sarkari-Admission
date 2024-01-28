@@ -4,7 +4,7 @@ const Job = new mongoose.Schema({
     jobName:{
         type:String
     },
-    applyLink:{
+    jobApplyLink:{
         type:String
     },
     eligibility:{
@@ -18,6 +18,10 @@ const Job = new mongoose.Schema({
     },
     companyLogo:{
         type:String
+    },
+    jobType:{
+        type:String,
+        enum:["Entrance","Civil Services"]
     }
 })
 module.exports = mongoose.model('JobData', Job);

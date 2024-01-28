@@ -4,7 +4,7 @@ const userVerification=require('../models/userOTPverificationmodel')
 const bcrypt = require("bcrypt")
 const jwt = require('jsonwebtoken')
 const nodemailer = require('nodemailer')
-const userModel = require('../models/userModel')
+
 require("dotenv").config();
 const secret = process.env.JWT_SECRET;
 const mail=process.env.AUTH_MAIL

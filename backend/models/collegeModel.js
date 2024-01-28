@@ -2,24 +2,29 @@ const mongoose = require('mongoose')
 
 const College = new mongoose.Schema({
     collegeName:{
-        type:String
+        type:String,
+        required:true
     },
     affiliatedUniversity:{
-        type:String
+        type:String,
+        required:true
     },
-    course:[{
-        type:mongoose.Types.ObjectId
-    }],
+    course:Array,
     location:{
-        type:String
+        type:String,
+        required:true
     },
     ranking:{
         type:String
     },
     collegeType:{
         type:String,
-        enum:['Private','Goverment']
+        enum:['Private','Government'],
+        required:true
     },
-    
+    collegeApplylink:String,
+    collegeImg:{
+        type:String
+    }
 })
 module.exports = mongoose.model('CollegeData', College);
