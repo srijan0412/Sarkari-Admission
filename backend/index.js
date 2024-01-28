@@ -12,7 +12,7 @@ app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: false, limit: '50mb' }));
 
 app.use("/user", require("./routes/userRoutes.js"));
-
+app.use("/college",require("./routes/collegeRoutes.js"));
 
 app.listen(
     4000,
