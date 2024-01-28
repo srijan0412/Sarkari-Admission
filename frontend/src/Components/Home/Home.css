@@ -1,8 +1,18 @@
-#main{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    width: 100vw;
-    height: max-content;
-    background-color: aqua;
+#main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  color: #fff;
+}
+
+#main h1 {
+  font-weight: 300;
+  font-size: 3rem;
+}
+
+#main p {
+  font-weight: 300;
 }

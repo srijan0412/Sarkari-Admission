@@ -4,37 +4,38 @@ import "./Navbar.css";
 
 const data = [
   {
-    id : 1,
-    title : "College",
+    id: 1,
+    title: "College",
   },
   {
-    id : 2,
-    title : "Exam",
+    id: 2,
+    title: "Exam",
   },
   {
-    id : 3,
-    title : "Courses"
+    id: 3,
+    title: "Courses",
   },
   {
-    id : 4,
-    title : "Career"
+    id: 4,
+    title: "Career",
   },
   {
-    id : 5,
-    title : "Study Abroad"
+    id: 5,
+    title: "Study Abroad",
   },
   {
-    id : 6,
-    title : "Latest Updates"
+    id: 6,
+    title: "Latest Updates",
   },
   {
-    id : 7,
-    title : "More"
+    id: 7,
+    title: "More",
   },
-]
+];
 
 const Navbar = () => {
   const [HeaderTopToggler, setHeaderTopToggler] = useState(true);
+  const [ShowLogin, setShowLogin] = useState(false);
   return (
     <header>
       <div className={`${HeaderTopToggler ? "HeaderTop" : "invisible"}`}>
@@ -72,23 +73,55 @@ const Navbar = () => {
       </div>
       <div className="HeaderLow">
         <div className="BrandLogoArea">
-          <img src={SarkariAdmissionLogo} className="Logo" alt="SarkariAdmission" />
+          <img
+            src={SarkariAdmissionLogo}
+            className="Logo"
+            alt="SarkariAdmission"
+          />
         </div>
         <div className="NavLinkArea">
-          <ul>
+          <ul className="Navlinks">
             {data.map((obj) => (
               <li className="Navlink" key={obj.id}>
                 <div className="LinkTitle">
                   <p>{obj.title}</p>
                   <ion-icon name="chevron-down-outline"></ion-icon>
                 </div>
+                <div>{/* Currently Empty but will be filled later */}</div>
               </li>
             ))}
           </ul>
-          <div className="ExtraLinks">
-            <ion-icon name="person-circle-outline"></ion-icon>
-            <ion-icon name="search-outline"></ion-icon>
-          </div>
+          <ul className="ExtraLinksArea">
+            <li className="Extralink">
+              <ion-icon name="person-circle-outline"></ion-icon>
+              <div className="LoginDialogBox">
+                <div className="LoginButtonContainer">
+                  <button>Login to your account</button>
+                </div>
+                <div className="RegisterButtonContainer">
+                  <h3>By creating an account you can -</h3>
+                  <ul>
+                    <li>
+                      <ion-icon name="checkmark-outline"></ion-icon>
+                      Apply to colleges directly
+                    </li>
+                    <li>
+                      <ion-icon name="checkmark-outline"></ion-icon>
+                      Shortlist colleges for quick access
+                    </li>
+                    <li>
+                      <ion-icon name="checkmark-outline"></ion-icon>
+                      Get free counselling
+                    </li>
+                  </ul>
+                  <button>Create an account</button>
+                </div>
+              </div>
+            </li>
+            <li className="Extralink">
+              <ion-icon name="search-outline" onClick={()=>{}}></ion-icon>
+            </li>
+          </ul>
         </div>
       </div>
     </header>

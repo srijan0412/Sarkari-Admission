@@ -2,6 +2,7 @@
   --color1: #e9ecff;
   --color2: #050038;
   --color3: #f5a041;
+  --mw: 1400px
 }
 
 header {
@@ -52,6 +53,7 @@ header {
 }
 
 .HeaderMid {
+  /* width: var(--mw);*/
   width: 85%;
   display: flex;
   justify-content: space-between;
@@ -97,6 +99,7 @@ header {
 }
 
 .HeaderLow {
+  /* width: var(--mw); */
   width: 85%;
   display: flex;
   justify-content: space-between;
@@ -109,17 +112,24 @@ header {
 }
 
 .NavLinkArea {
-  color: #fff;
+  /* color: #fff; */
   display: flex;
   gap: 1.5rem;
 }
 
-.NavLinkArea ul {
+.NavLinkArea .Navlinks {
   display: flex;
   align-items: center;
   list-style-type: none;
   gap: 1.5rem;
 }
+
+.Navlink {
+  color: #fff;
+}
+
+
+
 
 .LinkTitle {
   display: flex;
@@ -129,10 +139,91 @@ header {
   cursor: pointer;
 }
 
-.ExtraLinks{
+.ExtraLinksArea{
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  font-size: 2rem;
 }
+
+.Extralink {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  /* display: inline-block; */
+  position: relative;
+}
+
+.Extralink ion-icon {
+  color: white;
+}
+
+.LoginDialogBox{
+  width: 350px;
+  position: absolute;
+  background-color: #fff;
+  top: 100px;
+  right: 90%;
+  border-radius: 0.5rem;
+}
+
+.LoginButtonContainer {
+  border-radius: 0.5rem 0.5rem 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color1);
+}
+
+.LoginButtonContainer button {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  margin: 2rem 1rem;
+  border: none;
+  background-color: #3f53d9;
+  color: white;
+  border-radius: 5px;
+}
+
+.RegisterButtonContainer {
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.RegisterButtonContainer h3 {
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.RegisterButtonContainer ul {
+  font-size: 1rem;
+  list-style-type: none;
+  margin: 0.5rem 0;
+}
+
+.RegisterButton ul li {
+  display: flex;
+  align-items: center;
+}
+
+.RegisterButtonContainer ul ion-icon {
+  color: rgb(19, 209, 19);
+  font-size: 1.5rem;
+}
+
+.RegisterButtonContainer button {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  border: 2px solid #3f53d9;
+  background-color: transparent;
+  color: #3f53d9;
+  border-radius: 5px;
+}
+
+/* Media Querries */
+
 
