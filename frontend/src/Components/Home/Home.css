@@ -1,18 +1,5 @@
-#main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+#home{
   width: 100%;
-  color: #fff;
-}
-
-#main h1 {
-  font-weight: 300;
-  font-size: 3rem;
-}
-
-#main p {
-  font-weight: 300;
+  height: 100vh;
+  background-color: lightblue;
 }
