@@ -20,11 +20,12 @@
 
 html,
 body {
-  height: 100%;
+  height: 100vh;
   width: 100%;
   font-family: "Roboto", sans-serif;
   background-color: var(--color2);
   position: relative;
+  
 }
 
 /* Utility Classes */
