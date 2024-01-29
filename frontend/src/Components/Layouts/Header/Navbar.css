@@ -12,6 +12,8 @@ header {
   align-items: center;
 }
 
+/* Header Top CSS */
+
 .HeaderTop {
   width: 100%;
   display: flex;
@@ -51,6 +53,8 @@ header {
   right: 10px;
   cursor: pointer;
 }
+
+/* Header Mid CSS */
 
 .HeaderMid {
   /* width: var(--mw);*/
@@ -98,6 +102,8 @@ header {
   align-items: center;
 }
 
+/* Header Low CSS */
+
 .HeaderLow {
   /* width: var(--mw); */
   width: 85%;
@@ -129,8 +135,6 @@ header {
 }
 
 
-
-
 .LinkTitle {
   display: flex;
   font-size: 14px;
@@ -149,12 +153,12 @@ header {
   font-size: 2rem;
   display: flex;
   justify-content: center;
-  /* display: inline-block; */
   position: relative;
 }
 
 .Extralink ion-icon {
   color: white;
+  cursor: pointer;
 }
 
 .LoginDialogBox{
@@ -183,6 +187,7 @@ header {
   background-color: #3f53d9;
   color: white;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .RegisterButtonContainer {
@@ -204,7 +209,7 @@ header {
   margin: 0.5rem 0;
 }
 
-.RegisterButton ul li {
+.RegisterButtonContainer ul li {
   display: flex;
   align-items: center;
 }
@@ -214,7 +219,14 @@ header {
   font-size: 1.5rem;
 }
 
-.RegisterButtonContainer button {
+.Registerbtn {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Registerbtn button {
   font-size: 16px;
   font-weight: 600;
   padding: 1rem 2rem;
@@ -222,8 +234,48 @@ header {
   background-color: transparent;
   color: #3f53d9;
   border-radius: 5px;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.MobileLinks {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  list-style-type: none;
+  gap: 1.5rem;
+}
+
+.MobileLinks li {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+}
+
+.MobileLinks li ion-icon {
+  font-size: 2rem;
+  cursor: pointer;
 }
 
 /* Media Querries */
+
+@media (max-width: 1000px) {
+  .HeaderTop {
+    display: none;
+  }
+
+  .HeaderMid {
+    display: none;
+  }
+
+  .NavLinkArea {
+    display: none;
+  }
+
+  .MobileLinks {
+    display: flex;
+  }
+}
 
 

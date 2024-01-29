@@ -33,6 +33,44 @@ const data = [
   },
 ];
 
+const SigninDialogue = () => {
+  return (
+    <div className="LoginDialogBox">
+      <div className="LoginButtonContainer">
+        <button>Login to your account</button>
+      </div>
+      <div className="RegisterButtonContainer">
+        <h3>By creating an account you can -</h3>
+        <ul>
+          <li>
+            <ion-icon name="checkmark-outline"></ion-icon>
+            Apply to colleges directly
+          </li>
+          <li>
+            <ion-icon name="checkmark-outline"></ion-icon>
+            Shortlist colleges for quick access
+          </li>
+          <li>
+            <ion-icon name="checkmark-outline"></ion-icon>
+            Get free counselling
+          </li>
+        </ul>
+        <div className="Registerbtn">
+          <button>Create an account</button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const Search = () => {
+  return (
+    <div>
+      Search
+    </div>
+  )
+}
+
 const Navbar = () => {
   const [HeaderTopToggler, setHeaderTopToggler] = useState(true);
   const [ShowLogin, setShowLogin] = useState(false);
@@ -94,35 +132,22 @@ const Navbar = () => {
           <ul className="ExtraLinksArea">
             <li className="Extralink">
               <ion-icon name="person-circle-outline"></ion-icon>
-              <div className="LoginDialogBox">
-                <div className="LoginButtonContainer">
-                  <button>Login to your account</button>
-                </div>
-                <div className="RegisterButtonContainer">
-                  <h3>By creating an account you can -</h3>
-                  <ul>
-                    <li>
-                      <ion-icon name="checkmark-outline"></ion-icon>
-                      Apply to colleges directly
-                    </li>
-                    <li>
-                      <ion-icon name="checkmark-outline"></ion-icon>
-                      Shortlist colleges for quick access
-                    </li>
-                    <li>
-                      <ion-icon name="checkmark-outline"></ion-icon>
-                      Get free counselling
-                    </li>
-                  </ul>
-                  <button>Create an account</button>
-                </div>
-              </div>
+              {/* <SigninDialogue /> */}
             </li>
             <li className="Extralink">
-              <ion-icon name="search-outline" onClick={()=>{}}></ion-icon>
+              <ion-icon name="search-outline" onClick={() => {}}></ion-icon>
+              {/* <Search /> */}
             </li>
           </ul>
         </div>
+        <ul className="MobileLinks">
+            <li>
+              <ion-icon name="person-circle-outline"></ion-icon>
+            </li>
+            <li>
+              <ion-icon name="menu-outline"></ion-icon>
+            </li>
+        </ul>
       </div>
     </header>
   );
