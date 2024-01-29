@@ -24,7 +24,7 @@ body {
   width: 100%;
   font-family: "Roboto", sans-serif;
   background-color: var(--color2);
-
+  position: relative;
 }
 
 /* Utility Classes */

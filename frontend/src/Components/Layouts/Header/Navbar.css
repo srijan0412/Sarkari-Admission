@@ -20,7 +20,7 @@ header {
   justify-content: center;
   align-items: center;
   background-color: var(--color1);
-  padding: 5px 0;
+  padding: 5px 1rem;
   position: relative;
   gap: 0.5rem;
 }
@@ -251,6 +251,7 @@ header {
   display: flex;
   align-items: center;
   justify-self: center;
+  /* position: relative; */
 }
 
 .MobileLinks li ion-icon {
@@ -258,12 +259,59 @@ header {
   cursor: pointer;
 }
 
+.MobileNavbar {
+  /* display: none; */
+  position: absolute;
+  height: 100vh;
+  width: 340px;
+  color: #000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+
+}
+
+.MobileNavbarTop {
+  background-color: #e9ecff;
+  position: relative;
+  padding: 1.5rem;
+}
+
+.MobileNavbarTop ion-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1rem;
+  color: #0000007c;
+}
+
+.MobileNavbarTop p {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.MobileLoginbtn {
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 0.8rem 1.3rem;
+  border: none;
+  background-color: #3f53d9;
+  color: #fff;
+  border-radius: 5px;
+}
+
+
+
+ 
+
 /* Media Querries */
 
 @media (max-width: 1000px) {
-  .HeaderTop {
+  /* .HeaderTop {
     display: none;
-  }
+  } */
 
   .HeaderMid {
     display: none;

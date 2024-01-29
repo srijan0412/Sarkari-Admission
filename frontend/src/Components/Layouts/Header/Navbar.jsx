@@ -64,16 +64,13 @@ const SigninDialogue = () => {
 };
 
 const Search = () => {
-  return (
-    <div>
-      Search
-    </div>
-  )
-}
+  return <div>Search</div>;
+};
 
 const Navbar = () => {
   const [HeaderTopToggler, setHeaderTopToggler] = useState(true);
   const [ShowLogin, setShowLogin] = useState(false);
+  const [NavbarStatus, setNavbarStatus] = useState(true);
   return (
     <header>
       <div className={`${HeaderTopToggler ? "HeaderTop" : "invisible"}`}>
@@ -141,12 +138,21 @@ const Navbar = () => {
           </ul>
         </div>
         <ul className="MobileLinks">
-            <li>
-              <ion-icon name="person-circle-outline"></ion-icon>
-            </li>
-            <li>
-              <ion-icon name="menu-outline"></ion-icon>
-            </li>
+          <li>
+            <ion-icon name="person-circle-outline"></ion-icon>
+            <div className="MobileNavbar">
+              <div className="MobileNavbarTop">
+                <ion-icon onClick={()=>{CloseNavbar}} name="close-outline"></ion-icon>
+                <p>Hi Welcome to CollegeDekho!</p>
+                <button className="MobileLoginbtn">Login / Register</button>
+              </div>
+              <div className="MobileNavbarMiddle">NavMiddle</div>
+              <div className="MobileNavbarLower">NavLower</div>
+            </div>
+          </li>
+          <li>
+            <ion-icon name="menu-outline"></ion-icon>
+          </li>
         </ul>
       </div>
     </header>
