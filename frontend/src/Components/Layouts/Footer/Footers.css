@@ -1,0 +1,213 @@
+
+#footers{
+    width: 100%;
+    background-color: black;
+    color: #fff;
+    font-family: gilroy;
+    overflow: hidden;
+}
+.top-line{
+    height: 35vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.top-line .box{
+    height: 100%;
+    width: 23%;
+    padding: 2vw;
+}
+.box h3{
+    margin-bottom: 1vw;
+    font-weight: 400;
+}
+.box h4{
+    font-size: 1vw;
+    font-weight: 500;
+    margin-bottom: 0.2vw;
+    color: grey;
+}
+.box:nth-child(5) h4{
+    margin-bottom: 1vw;
+}
+.mid-line1{
+    height: 7vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3vw;
+    border-bottom: 1px solid #ada5a5;
+    border-top: 1px solid #6b6b6b;
+
+}
+.mid-line1 h4{
+    font-weight: 500;
+}
+
+.mid-line2 h4{
+    font-weight: 500;
+}
+.mid-line2{
+    height: 7vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3vw;
+    border-bottom: 1px solid #6b6b6b;
+}
+.bottom-line{
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    padding: 2.5vh 3vw;
+    border-bottom: 1px solid #6b6b6b;
+    
+}
+.bottom-line .sBox{
+    height: 100%;
+    width: 18%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.sBox h3{
+    margin-bottom: 1vw;
+    font-weight: 400;
+}
+.sBox h4{
+    font-size: 1vw;
+    font-weight: 500;
+    margin-bottom: 0.2vw;
+    color: grey;
+}
+.bottom-line2{
+    height: 11vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3vw;
+
+}
+.bottom-line2 h4{
+    font-size: 1vw;
+    font-weight: 400;
+    color: rgb(163, 163, 163);
+}
+
+@media(max-width: 700px) {
+
+    #footers{
+        height: max-content;
+        width: 100%;
+        background-color: black;
+        color: #fff;
+        font-family: gilroy;
+        overflow: hidden;
+        padding: 5vh 5vw;
+    }
+    .top-line{
+        width: 100vw;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .top-line .box{
+        height: 100%;
+        width: 100%;
+    }
+    .box h3{
+        margin-bottom: 1vw;
+        font-weight: 400;
+        font-size: 5vw;
+        margin-bottom: 2vh;
+    }
+    .box h4{
+        font-size: 2.5vw;
+        font-weight: 500;
+        margin-bottom: 1vw;
+        color: grey;
+    }
+    .box:nth-child(4) h4{
+        margin-bottom: 2vw;
+    }
+    .box .socialMedia{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 130px;
+    }
+    
+    .mid-line1{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #6b6b6b;
+        border-top: 1px solid #6b6b6b;
+
+    }
+    .mid-line1 h4{
+        font-weight: 500;
+    }
+    
+    .mid-line2 h4{
+        font-weight: 500;
+    }
+    .mid-line2{
+        height: 7vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #6b6b6b;
+    }
+    .bottom-line{
+        height: max-content;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-bottom: 1px solid #6b6b6b;
+        
+    }
+    .bottom-line .sBox{
+        height: max-content;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    
+    .sBox h3{
+        margin-bottom: 1vw;
+        font-weight: 400;
+        font-size: 3vw;
+        margin-bottom: 2vh;
+    }
+    .sBox h4{
+        font-size: 2.5vw;
+        font-weight: 500;
+        color: grey;
+        margin-bottom: 1vh;
+    }
+    .bottom-line2{
+        height: 5vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .bottom-line2 h4{
+        font-size: 3vw;
+        font-weight: 400;
+        color: rgb(163, 163, 163);
+    }
+}

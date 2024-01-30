@@ -1,6 +1,6 @@
 import React from "react";
 import "./Global.css";
-import { Footer, Navbar, Home, College } from "./Components/export";
+import { Footers, Navbar, Home, College } from "./Components/export";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
@@ -13,7 +13,7 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/college" element={<College/>} />
           </Routes>
-        <Footer />
+        <Footers />
       </>
     </Router>
   );
