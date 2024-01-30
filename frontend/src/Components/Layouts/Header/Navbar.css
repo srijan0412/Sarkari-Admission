@@ -266,11 +266,23 @@ header {
   width: 340px;
   color: #000;
   position: absolute;
+  /* top: 0; */
+  /* right: -100%; */
+  background-color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.enable {
   top: 0;
   right: 0;
-  background-color: #fff;
-
+  box-shadow: 0 0 10000px #000000a8;
 }
+
+.disable {
+  top: 0;
+  right: -340px;
+}
+
 
 .MobileNavbarTop {
   background-color: #e9ecff;
@@ -280,8 +292,8 @@ header {
 
 .MobileNavbarTop ion-icon {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 15px;
+  right: 15px;
   font-size: 1rem;
   color: #0000007c;
 }

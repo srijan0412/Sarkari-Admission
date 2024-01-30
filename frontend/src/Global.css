@@ -25,6 +25,7 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: var(--color2);
   position: relative;
+  overflow-x: hidden;
 }
 
 /* Utility Classes */
