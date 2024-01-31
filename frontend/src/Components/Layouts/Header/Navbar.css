@@ -2,7 +2,8 @@
   --color1: #e9ecff;
   --color2: #000000;
   --color3: #f5a041;
-  --mw: 1400px
+  --color4: #3f53d9;
+  --mx: 85%;
 }
 
 header {
@@ -35,7 +36,7 @@ header {
   font-size: 14px;
   /* font-weight: 500; */
   color: #fff;
-  background-color: #3f53d9;
+  background-color: var(--color4);
   text-decoration: none;
   padding: 4px 6px;
   border-radius: 5px;
@@ -57,8 +58,7 @@ header {
 /* Header Mid CSS */
 
 .HeaderMid {
-  /* width: var(--mw);*/
-  width: 85%;
+  width: var(--mx);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -105,8 +105,7 @@ header {
 /* Header Low CSS */
 
 .HeaderLow {
-  /* width: var(--mw); */
-  width: 85%;
+  width: var(--mx);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -230,9 +229,9 @@ header {
   font-size: 16px;
   font-weight: 600;
   padding: 1rem 2rem;
-  border: 2px solid #3f53d9;
+  border: 2px solid var(--color4);
   background-color: transparent;
-  color: #3f53d9;
+  color: var(--color4);
   border-radius: 5px;
   margin-top: 1rem;
   cursor: pointer;
@@ -270,6 +269,7 @@ header {
   /* right: -100%; */
   background-color: #fff;
   transition: all 0.2s ease-in-out;
+  overflow-y: scroll;
 }
 
 .enable {
@@ -309,10 +309,45 @@ header {
   text-decoration: none;
   padding: 0.8rem 1.3rem;
   border: none;
-  background-color: #3f53d9;
+  background-color: var(--color4);
   color: #fff;
   border-radius: 5px;
 }
+
+.MobileNavbarMiddle {
+  padding: 0 1.5rem;
+}
+
+.MobileNavLinkTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.441);
+}
+
+.MobileNavInfoLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.MobileNavLinkTitle ion-icon{
+  width: 15px;
+}
+
+.MobileNavInfoLeft img {
+  width: 35px;
+}
+
+.MobileNavInfoLeft p{
+  font-size: 14px;
+}
+
+.MobileNavbarLower {
+  padding: 1.5rem;
+}
+
 
 
 
@@ -339,3 +374,20 @@ header {
 }
 
 
+@media (min-width: 1000px) and (max-width: 1200px){
+  :root {
+    --mx : 95%;
+  }
+}
+
+@media (min-width: 1200px) and (max-width:1800px) {
+  :root {
+    --mx: 85%;
+  }
+}
+
+@media (min-width: 1800px) {
+  :root {
+    --mx: 1530px;
+  }
+}

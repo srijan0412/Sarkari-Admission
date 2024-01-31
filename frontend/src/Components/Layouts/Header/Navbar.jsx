@@ -1,35 +1,51 @@
 import React, { useState } from "react";
-import { SarkariAdmissionLogo } from "../../../Assets";
+import {
+  SarkariAdmissionLogo,
+  career,
+  college,
+  courses,
+  exam,
+  more,
+  studyabroad,
+  trending,
+} from "../../../Assets";
 import "./Navbar.css";
 
 const data = [
   {
     id: 1,
     title: "College",
+    icon: college,
   },
   {
     id: 2,
     title: "Exam",
+    icon: exam,
   },
   {
     id: 3,
     title: "Courses",
+    icon: courses,
   },
   {
     id: 4,
     title: "Career",
+    icon: career,
   },
   {
     id: 5,
     title: "Study Abroad",
+    icon: studyabroad,
   },
   {
     id: 6,
     title: "Latest Updates",
+    icon: trending,
   },
   {
     id: 7,
     title: "More",
+    icon: more,
   },
 ];
 
@@ -142,15 +158,55 @@ const Navbar = () => {
             <ion-icon name="person-circle-outline"></ion-icon>
           </li>
           <li>
-            <ion-icon name="menu-outline" onClick={()=>{setNavbarStatus(true)}}></ion-icon>
-            <div className={`MobileNavbar ${NavbarStatus ? "enable" : "disable"}`}>
+            <ion-icon
+              name="menu-outline"
+              onClick={() => {
+                setNavbarStatus(true);
+              }}
+            ></ion-icon>
+            <div
+              className={`MobileNavbar ${NavbarStatus ? "enable" : "disable"}`}
+            >
               <div className="MobileNavbarTop">
-                <ion-icon onClick={()=>{setNavbarStatus(false)}} name="close-outline"></ion-icon>
+                <ion-icon
+                  onClick={() => {
+                    setNavbarStatus(false);
+                  }}
+                  name="close-outline"
+                ></ion-icon>
                 <p>Hi Welcome to CollegeDekho!</p>
                 <button className="MobileLoginbtn">Login / Register</button>
               </div>
-              <div className="MobileNavbarMiddle">NavMiddle</div>
-              <div className="MobileNavbarLower">NavLower</div>
+              <div className="MobileNavbarMiddle">
+                {data.map((elem) => (
+                  <div className="MobileNavLinkTitle" key={elem.id}>
+                    <div className="MobileNavInfoLeft">
+                      <img src={elem.icon} alt="college" />
+                      <p>{elem.title}</p>
+                    </div>
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                  </div>
+                ))}
+                <div className="MobileNavLinkTitle">
+                  <div className="MobileNavInfoLeft">
+                    <img src={college} alt="college" />
+                    <p>Colleges</p>
+                  </div>
+                  <ion-icon name="chevron-forward-outline"></ion-icon>
+                </div>
+              </div>
+              <div className="MobileNavbarLower">
+                <p>CONNECT WITH US</p>
+                <a href="/">
+                  <ion-icon name="call-outline"></ion-icon>
+                  <p>1800-572-9877</p>
+                </a>
+                <a href="/">
+                  <ion-icon name="send-outline"></ion-icon>
+                  <p>hello@collegedekho.com</p>
+                </a>
+                
+              </div>
             </div>
           </li>
         </ul>
