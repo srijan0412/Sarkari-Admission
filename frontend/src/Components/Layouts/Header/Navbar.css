@@ -349,17 +349,9 @@ header {
 }
 
 
-
-
- 
-
 /* Media Querries */
 
 @media (max-width: 1000px) {
-  /* .HeaderTop {
-    display: none;
-  } */
-
   .HeaderMid {
     display: none;
   }

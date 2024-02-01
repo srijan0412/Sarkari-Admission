@@ -1,0 +1,159 @@
+:root {
+  --color1: #fbfbfc;
+  --color2: #050038;
+  --color3: #f5a041;
+  --color4: #3f53d9;
+  --color5: rgb(134, 134, 134);
+}
+
+.LoginScreen {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0000007e;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.LoginBox {
+  max-width: 700px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 312px auto;
+}
+
+.LeftLoginBox {
+  background-color: var(--color2);
+  color: #fff;
+  padding: 28px 15px;
+}
+
+.LeftLoginBox h3 {
+  font-size: 24px;
+  font-weight: 300;
+  padding-bottom: 5px;
+}
+
+.LeftLoginBox p {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.RightLoginBox {
+  position: relative;
+  background-color: #fff;
+  padding: 10px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.RightLoginBox ion-icon {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.Templogo {
+  width: 130px;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.SwitchForLR {
+  font-size: 14px;
+  padding: 0.5rem 0;
+}
+
+.SwitchForLR span {
+  color: var(--color4);
+  cursor: pointer;
+}
+
+.LoginFormBox {
+  width: 100%;
+}
+
+.BoxHeading {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.BoxDesc {
+  font-size: 14px;
+  color: #000000a0;
+  text-align: center;
+}
+
+.InputForm ul{
+  list-style-type: none;
+  margin-top: 1.5rem;
+}
+
+.FormInputElement {
+  width: 100%;
+  height: 40px;
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.FormInputElement input {
+  width: 100%;
+  height: 100%;
+  padding: 0 1rem;
+  font-size: 14px;
+  border: 1px solid var(--color5);
+  outline: none;
+}
+
+.FormInputElement label {
+  background-color: #fff;
+  position: absolute;
+  font-size: 14px;
+  color: var(--color5);
+  left: 11px;
+  top: 11px;
+  transition: 0.2s ease-in;
+  padding: 0 5px;
+}
+
+.FormInputElement:hover label{
+  font-size: 12px;
+  top: -7px;
+} 
+
+/* .FormInputElement:active label {
+  font-size: 12px;
+  top: -5px;
+} */
+
+.FormInputElement ion-icon{
+  position: absolute;
+  top: 11px;
+  right: 10px;
+  color: var(--color5);
+  font-size: 20px;
+}
+
+.ActionBtn {
+  font-size: 14px;
+  width: 100%;
+  padding: 0.7rem 0;
+  border: none;
+  background-color: #3f53d9;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 3px;
+  font-weight: 300;
+}
+
+.RegisterFormBox {
+  width: 100%;
+}

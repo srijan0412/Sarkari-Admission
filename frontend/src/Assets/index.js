@@ -6,7 +6,7 @@ import exam from "./Nav-icons/exam.svg";
 import more from "./Nav-icons/more.svg";
 import studyabroad from "./Nav-icons/studyabroad.svg";
 import trending from "./Nav-icons/trending.svg";
-
+import TempLogo from "./TempLogo.svg";
 
 export {
     SarkariAdmissionLogo,
@@ -17,4 +17,5 @@ export {
     more,
     studyabroad,
     trending,
+    TempLogo
 }

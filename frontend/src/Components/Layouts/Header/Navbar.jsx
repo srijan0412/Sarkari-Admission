@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Login from "./Login/Login";
 import {
   SarkariAdmissionLogo,
   career,
@@ -205,12 +206,19 @@ const Navbar = () => {
                   <ion-icon name="send-outline"></ion-icon>
                   <p>hello@collegedekho.com</p>
                 </a>
-                
+                <div className="socials">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                  <ion-icon name="logo-instagram"></ion-icon>
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                  <ion-icon name="logo-youtube"></ion-icon>
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </div>
               </div>
             </div>
           </li>
         </ul>
       </div>
+      {/* <Login /> */}
     </header>
   );
 };
