@@ -16,11 +16,6 @@ const data = [
     desc: "Get detailed information about Colleges, Careers, Courses, and Exams at CollegeDekho. Register now and make informed decisions about your career.",
   },
 ];
-let FormInputElement = document.getElementsByClassName(".FormInputElement");
-document.addEventListener("click",(event) => {
-  console.log(event);
-})
-
 
 const LoginFormBox = () => {
   const [ShowPassword, setShowPassword] = useState(false);
