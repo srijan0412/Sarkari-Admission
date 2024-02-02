@@ -42,7 +42,7 @@ const LoginFormBox = () => {
       <form onSubmit={handleFormSubmit} className="InputForm">
         <ul>
           <li className="FormInputElement">
-            <input ref={inputRef} type="email" value={Email} onChange={handleEmailChange} required/>
+            <input type="email" value={Email} onChange={handleEmailChange} required/>
             <label>Email</label>
           </li>
           <li className="FormInputElement">
