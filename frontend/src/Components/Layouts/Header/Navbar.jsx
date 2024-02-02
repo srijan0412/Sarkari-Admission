@@ -218,7 +218,7 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      {/* <Login /> */}
+      <Login />
     </header>
   );
 };

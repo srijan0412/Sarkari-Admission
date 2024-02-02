@@ -124,15 +124,17 @@
   padding: 0 5px;
 }
 
-.FormInputElement:hover label{
+.FormInputElement input:focus,
+.FormInputElement input:valid {
+  border-color: #3f53d9;
+}
+
+.FormInputElement input:focus ~ label,
+.FormInputElement input:valid ~ label {
   font-size: 12px;
   top: -7px;
-} 
-
-/* .FormInputElement:active label {
-  font-size: 12px;
-  top: -5px;
-} */
+  color: var(--color4);
+}
 
 .FormInputElement ion-icon{
   position: absolute;
@@ -140,6 +142,19 @@
   right: 10px;
   color: var(--color5);
   font-size: 20px;
+}
+
+.ForgotPasswordContainer {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.ForgotPasswordContainer a {
+  font-size: 14px;
+  text-decoration: none;
+  color: var(--color4);
+  margin-bottom: 1rem;
 }
 
 .ActionBtn {

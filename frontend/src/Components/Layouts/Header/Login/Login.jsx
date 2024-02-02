@@ -16,6 +16,11 @@ const data = [
     desc: "Get detailed information about Colleges, Careers, Courses, and Exams at CollegeDekho. Register now and make informed decisions about your career.",
   },
 ];
+let FormInputElement = document.getElementsByClassName(".FormInputElement");
+document.addEventListener("click",(event) => {
+  console.log(event);
+})
+
 
 const LoginFormBox = () => {
   const [ShowPassword, setShowPassword] = useState(false);
@@ -26,15 +31,18 @@ const LoginFormBox = () => {
       <form action="" className="InputForm">
         <ul>
           <li className="FormInputElement">
-            <input type="text" minLength={10} />
-            <label htmlFor="" className="Inputlabel">Mobile Number</label>
+            <input type="text" required/>
+            <label htmlFor="" className="FormInputLabelBefore">Mobile Number</label>
           </li>
           <li className="FormInputElement">
-            <input type={`${ShowPassword ? "text" : "password"}`} minLength={8}/>
-            <label htmlFor="" className="Inputlabel">Password</label>
+            <input type={`${ShowPassword ? "text" : "password"}`} required/>
+            <label htmlFor="" className="FormInputLabelBefore">Password</label>
             <ion-icon name={`${ShowPassword ? "eye-off-outline":"eye-outline"}`} className="ShowPassword" onClick={()=>{setShowPassword(!ShowPassword)}}></ion-icon>
           </li>
         </ul>
+        <div className="ForgotPasswordContainer">
+          <a href="/">ForgotPassword?</a>
+        </div>
         <button type="submit" className="ActionBtn">Login</button>
       </form>
     </div>
@@ -49,19 +57,19 @@ const RegisterFormBox = () => {
       <form action="" className="InputForm">
         <ul>
           <li className="FormInputElement">
-            <input type="text"/>
+            <input type="text" required/>
             <label htmlFor="" className="Inputlabel">Name</label>
           </li>
           <li className="FormInputElement">
-            <input type="email" />
+            <input type="email" required/>
             <label htmlFor="" className="Inputlabel">Email</label>
           </li>
           <li className="FormInputElement">
-            <input type="text" />
+            <input type="text" required/>
             <label htmlFor="" className="Inputlabel">Mobile Number</label>
           </li>
           <li className="FormInputElement">
-            <input type={`${ShowPassword ? "text" : "password"}`} minLength={8}/>
+            <input type={`${ShowPassword ? "text" : "password"}`} required/>
             <label htmlFor="" className="Inputlabel">Password</label>
             <ion-icon name={`${ShowPassword ? "eye-off-outline":"eye-outline"}`} className="ShowPassword" onClick={()=>{setShowPassword(!ShowPassword)}}></ion-icon>
           </li>
