@@ -188,13 +188,6 @@ const Navbar = () => {
                     <ion-icon name="chevron-forward-outline"></ion-icon>
                   </div>
                 ))}
-                <div className="MobileNavLinkTitle">
-                  <div className="MobileNavInfoLeft">
-                    <img src={college} alt="college" />
-                    <p>Colleges</p>
-                  </div>
-                  <ion-icon name="chevron-forward-outline"></ion-icon>
-                </div>
               </div>
               <div className="MobileNavbarLower">
                 <p>CONNECT WITH US</p>
@@ -218,6 +211,7 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
+      {/* Uncomment Below to see Login/Register */}
       <Login />
     </header>
   );

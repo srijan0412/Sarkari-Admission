@@ -1,7 +1,8 @@
 import "./Login.css";
 import { TempLogo } from "../../../../Assets";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
+// Static Data about the platform
 const data = [
   {
     title: "Guaranteed Admissions",
@@ -19,19 +20,34 @@ const data = [
 
 const LoginFormBox = () => {
   const [ShowPassword, setShowPassword] = useState(false);
+  const [Email, setEmail] = useState("");
+  const [Password, setPassword] = useState("");
+  
+  function handleEmailChange(event){
+    setEmail(event.target.value);
+  }
+
+  function handlePasswordChange(event){
+    setPassword(event.target.value);
+  }
+
+  function handleFormSubmit() {
+    // API Call 
+  }
+
   return (
     <div className="LoginFormBox">
       <h3 className="BoxHeading">Welcome Back!</h3>
       <p className="BoxDesc">Sign in to continue</p>
-      <form action="" className="InputForm">
+      <form onSubmit={handleFormSubmit} className="InputForm">
         <ul>
           <li className="FormInputElement">
-            <input type="text" required/>
-            <label htmlFor="" className="FormInputLabelBefore">Mobile Number</label>
+            <input ref={inputRef} type="email" value={Email} onChange={handleEmailChange} required/>
+            <label>Email</label>
           </li>
           <li className="FormInputElement">
-            <input type={`${ShowPassword ? "text" : "password"}`} required/>
-            <label htmlFor="" className="FormInputLabelBefore">Password</label>
+            <input type={`${ShowPassword ? "text" : "password"}`} value={Password} onChange={handlePasswordChange} required/>
+            <label>Password</label>
             <ion-icon name={`${ShowPassword ? "eye-off-outline":"eye-outline"}`} className="ShowPassword" onClick={()=>{setShowPassword(!ShowPassword)}}></ion-icon>
           </li>
         </ul>
@@ -46,25 +62,47 @@ const LoginFormBox = () => {
 
 const RegisterFormBox = () => {
   const [ShowPassword, setShowPassword] = useState(false);
+  const [Name, setName] = useState("");
+  const [Email, setEmail] = useState("");
+  const [PhoneNumber, setPhoneNumber] = useState("");
+  const [Password, setPassword] = useState("");
+
+  function handleNameChange(event) {
+    setName(event.target.value);
+  }
+  function handleEmailChange(event) {
+    setEmail(event.target.value);
+  }
+  function handlePhoneNumberChange(event) {
+    setPhoneNumber(event.target.value);
+  }
+  function handlePasswordChange(event) {
+    setPassword(event.target.value);
+  }
+  function handleFormSubmit() {
+    // Validations
+    // APIcall
+
+  }
   return (
     <div className="RegisterFormBox">
       <h3 className="BoxHeading">Welcome, Create your account</h3>
-      <form action="" className="InputForm">
+      <form onSubmit={() => {}} className="InputForm">
         <ul>
           <li className="FormInputElement">
-            <input type="text" required/>
+            <input type="text" value={Name} onChange={handleNameChange} required/>
             <label htmlFor="" className="Inputlabel">Name</label>
           </li>
           <li className="FormInputElement">
-            <input type="email" required/>
+            <input type="email" value={Email} onChange={handleEmailChange} required/>
             <label htmlFor="" className="Inputlabel">Email</label>
           </li>
           <li className="FormInputElement">
-            <input type="text" required/>
+            <input type="text" value={PhoneNumber} onChange={handlePhoneNumberChange} required/>
             <label htmlFor="" className="Inputlabel">Mobile Number</label>
           </li>
           <li className="FormInputElement">
-            <input type={`${ShowPassword ? "text" : "password"}`} required/>
+            <input type={`${ShowPassword ? "text" : "password"}`} value={Password} onChange={handlePasswordChange} required/>
             <label htmlFor="" className="Inputlabel">Password</label>
             <ion-icon name={`${ShowPassword ? "eye-off-outline":"eye-outline"}`} className="ShowPassword" onClick={()=>{setShowPassword(!ShowPassword)}}></ion-icon>
           </li>
@@ -77,6 +115,7 @@ const RegisterFormBox = () => {
 
 const Login = () => {
   const [ShowLogin, setShowLogin] = useState(true);
+
   return (
     <div className="LoginScreen">
       <div className="LoginBox">

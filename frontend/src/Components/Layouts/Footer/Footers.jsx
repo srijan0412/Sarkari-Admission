@@ -3,8 +3,8 @@ import "./Footers.css"
 const Footers = () => {
   return (
     <div id="footers">
-    <div class="top-line">
-        <div class="box">
+    <div className="top-line">
+        <div className="box">
             <h3>More to Explore</h3>
             <h4>Common Application Form</h4>
             <h4>Education Loan</h4>
@@ -12,7 +12,7 @@ const Footers = () => {
             <h4>Job Ready Courses</h4>
             <h4>Study Aboard</h4>
         </div>
-        <div class="box">
+        <div className="box">
             <h3>Tools & Research</h3>
             <h4>Career Compass</h4>
             <h4>Write a review</h4>
@@ -21,7 +21,7 @@ const Footers = () => {
             <h4>Unit Calculator</h4>
         </div>
         <br/>
-        <div class="box">
+        <div className="box">
             <h3>Quick Links</h3>
             <h4>About Us</h4>
             <h4>Contact Us</h4>
@@ -29,23 +29,23 @@ const Footers = () => {
             <h4>Boards</h4>
             <h4>Visual Stories</h4>
         </div>
-        <div class="box">
+        <div className="box">
             <h4> 5th Floor, BPTP centra One, Sector 61,<br/> Golf Course Extension Road Gurugram, Haryana <br/> 122002
             </h4>
-            <h4><i class="ri-phone-line"></i> 1800-572-9877</h4>
-            <h4><i class="ri-mail-line"></i> hello@collegedekho.com</h4>
+            <h4><i className="ri-phone-line"></i> 1800-572-9877</h4>
+            <h4><i className="ri-mail-line"></i> hello@collegedekho.com</h4>
         </div>
     </div>
-    <div class="mid-line1">
+    <div className="mid-line1">
         <h4>Trending Links</h4>
-        <i class="ri-arrow-down-s-line"></i>
+        <i className="ri-arrow-down-s-line"></i>
     </div>
-    <div class="mid-line2">
+    <div className="mid-line2">
         <h4>Most Viewed Links</h4>
-        <i class="ri-arrow-down-s-line"></i>
+        <i className="ri-arrow-down-s-line"></i>
     </div>
-    <div class="bottom-line">
-        <div class="sBox">
+    <div className="bottom-line">
+        <div className="sBox">
             <h3>Popular Universities</h3>
             <h4>CUSAT</h4>
             <h4>MNIT Jaipur</h4>
@@ -53,7 +53,7 @@ const Footers = () => {
             <h4>TEZPUR University</h4>
             <h4>ANNA University</h4>
         </div>
-        <div class="sBox">
+        <div className="sBox">
             <h4>DTU</h4>
             <h4>NIT Jalandar</h4>
             <h4>PUCHD</h4>
@@ -61,7 +61,7 @@ const Footers = () => {
             <h4>JAYPEE University</h4>
         </div>
     </div>
-    <div class="bottom-line2">
+    <div className="bottom-line2">
         <h4>Terms & Condition &nbsp; &nbsp;&nbsp; &nbsp; Privacy Policy</h4>
         <h4>©️2024 CollageDekho.com</h4>
     </div>
