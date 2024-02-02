@@ -86,8 +86,9 @@ const Search = () => {
 
 const Navbar = () => {
   const [HeaderTopToggler, setHeaderTopToggler] = useState(true);
-  const [ShowLogin, setShowLogin] = useState(false);
   const [NavbarStatus, setNavbarStatus] = useState(false);
+  const [showSignin, setShowSignin] = useState(true);
+
   return (
     <header>
       <div className={`${HeaderTopToggler ? "HeaderTop" : "invisible"}`}>
@@ -145,7 +146,7 @@ const Navbar = () => {
           </ul>
           <ul className="ExtraLinksArea">
             <li className="Extralink">
-              <ion-icon name="person-circle-outline"></ion-icon>
+              <ion-icon name="person-circle-outline" onClick={()=>{setShowSignin(true)}}></ion-icon>
               {/* <SigninDialogue /> */}
             </li>
             <li className="Extralink">
@@ -164,10 +165,10 @@ const Navbar = () => {
               onClick={() => {
                 setNavbarStatus(true);
               }}
-            ></ion-icon>
+              ></ion-icon>
             <div
               className={`MobileNavbar ${NavbarStatus ? "enable" : "disable"}`}
-            >
+              >
               <div className="MobileNavbarTop">
                 <ion-icon
                   onClick={() => {
@@ -212,7 +213,7 @@ const Navbar = () => {
         </ul>
       </div>
       {/* Uncomment Below to see Login/Register */}
-      <Login />
+      {showSignin && <Login handlecloseclick={()=>{setShowSignin(false)}}/>}
     </header>
   );
 };

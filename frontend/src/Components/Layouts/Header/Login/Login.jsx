@@ -113,7 +113,7 @@ const RegisterFormBox = () => {
   );
 }
 
-const Login = () => {
+const Login = ({handlecloseclick}) => {
   const [ShowLogin, setShowLogin] = useState(true);
 
   return (
@@ -124,7 +124,7 @@ const Login = () => {
           <p>Avail the chance of getting guaranteed admission to the best college for you. Register now and take a step towards your bright future.</p>
         </div>
         <div className="RightLoginBox">
-          <ion-icon name="close-outline"></ion-icon>
+          <ion-icon name="close-outline" onClick={handlecloseclick}></ion-icon>
           <img src={TempLogo} alt="Logo" className="Templogo"/>
           {ShowLogin ? <LoginFormBox/> : <RegisterFormBox />}
           {ShowLogin ?
