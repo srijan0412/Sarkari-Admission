@@ -88,6 +88,11 @@
   text-align: center;
 }
 
+.BoxHeadingSpan {
+  font-size: 14px;
+  font-weight: 500;
+}
+
 .BoxDesc {
   font-size: 14px;
   color: #000000a0;
@@ -175,6 +180,22 @@
 .RegisterFormBox {
   width: 100%;
 }
+
+.OtpInputField {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 3rem 0;
+}
+.OtpInput {
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  font-size: 1.2em
+}
+
 
 /* Media Querry */
 @media (max-width: 1000px) {

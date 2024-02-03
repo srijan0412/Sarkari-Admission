@@ -87,7 +87,7 @@ const Search = () => {
 const Navbar = () => {
   const [HeaderTopToggler, setHeaderTopToggler] = useState(true);
   const [NavbarStatus, setNavbarStatus] = useState(false);
-  const [showSignin, setShowSignin] = useState(true);
+  const [showSignin, setShowSignin] = useState(false);
 
   return (
     <header>
