@@ -1,7 +1,5 @@
 const mongoose = require('mongoose')
 const College=require('../models/collegeModel')
-const Job = require('../models/jobModel')
-const Result = require('../models/resultModel')
 exports.AddCollege = async(req,res)=>{
     try{
         const {collegeName,affiliatedUniversity,location,ranking,collegeType,courses,collegeApplylink}=req.body;
@@ -32,37 +30,18 @@ exports.CollegeList = async(req,res)=>{
     }
 }
 
-exports.AddJob = async(req,res)=>{
+
+
+exports.CollegeDetails = async(req,res)=>{
     try{
-        const {jobName,jobType,jobDescription,eligibility,lastDate,jobApplylink}=req.body;
-        //courses-array
-        const job=await Job.create({
-            jobName,
-            jobType,
-            lastDate,
-            jobDescription,
-            eligibility,
-            jobApplylink
-        })
         
-        res.status(200).json({msg:"Job added successfully",job});
-    }catch(err){
-        res.status(500).json({msg:err})
+        const collegeName = req.params.collegeName;
+        
+        const college = await College.find({collegeName});
+        
+        res.status(200).json(college)
+    }
+    catch(err){
+        res.status(500).json({msg:err.message})
     }
 }
-
-exports.AddResult = async(req,res)=>{
-    try{
-        const {examName,examResultLink}=req.body;
-        //courses-array
-        const result=await Result.create({
-            examName,
-            examResultLink
-            })
-        
-        res.status(200).json({msg:"Result added successfully",result});
-    }catch(err){
-        res.status(500).json({msg:err})
-    }
-}
-

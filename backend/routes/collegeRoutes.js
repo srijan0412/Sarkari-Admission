@@ -1,10 +1,9 @@
 const express = require('express');
 const app = express.Router();
-const {AddCollege,CollegeList,AddJob,AddResult}=require('../controllers/collegeControllers');
+const {AddCollege,CollegeList,CollegeDetails}=require('../controllers/collegeControllers');
 
 app.post('/add-college',AddCollege);
 app.post('/find-college',CollegeList);
-app.post('/add-job',AddJob);
-app.post('/add-result',AddResult);
+app.get('/college_details/:collegeName',CollegeDetails);
 
 module.exports=app;

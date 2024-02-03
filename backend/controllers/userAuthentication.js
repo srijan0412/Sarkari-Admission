@@ -134,3 +134,59 @@ exports.UserLogout = async (req,res)=>{
     res.status(500).json({success: true,message: "Logged Out Successfully",})
   }
 }
+
+exports.ForgotPassword = async (req, res) => {
+  try {
+    const { userEmail } = req.body;
+    if (!userEmail) {
+      res.status(400).json({ msg: 'Please provide the email' })
+    }
+
+    let user = await User.findOne({ userEmail });
+    if (user) {
+      const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: "1h" })
+      var mailOptions = {
+        from: process.env.AUTH_MAIL,
+        to: user.userEmail,
+        subject: 'Verify your email for password change',
+        html: `${'http://localhost:7000'}/user/reset-password/${token}`
+      };
+      await transporter.sendMail(mailOptions);
+      res.status(200).json({ msg: "Password reset link has been sent to your mail. " });
+    }
+    else {
+      res.status(409).json({ msg: 'User does not exists' })
+    }
+  }
+  catch (error) {
+    res.status(500).json({ error })
+  }
+}
+
+exports.ResetPassword = async (req, res) => {
+  try {
+    const {  token, password } = req.body
+    jwt.verify(token, process.env.JWT_SECRET , (err, decoded) => {
+      if (err) {
+        console.log(err)
+        return res.json({ msg: "Error with token : " + err })
+      } else {
+        console.log(decoded)
+        bcrypt.hash(password, 10)
+          .then(hash => {
+            
+            User.findByIdAndUpdate({ _id: decoded._id }, { password: hash })
+              .then(u =>
+                res.status(200).json({ msg: "Password has be successfully reset." })
+              )
+              .catch(err =>
+                res.json({ err })
+              )
+          })
+      }
+    })
+  }
+  catch (error) {
+    res.status(500).json({ error })
+  }
+}
